@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+  }
+
+  html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    line-height: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+  }
+}
