@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '../src/styles/globals.css'
+import Header from '@/components/base/header'
 
 export const metadata: Metadata = {
   title: 'Demo',
@@ -14,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='h-screen w-full bg-[linear-gradient(90deg,#D1DBEB_7%,#C7C7ED_79%,#E3DAF0_100%)] '>
-        <>{children}</>
+        <Header />
+        {children}
       </body>
     </html>
   )

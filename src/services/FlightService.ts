@@ -1,16 +1,19 @@
-import axios, { AxiosResponse } from 'axios';
-import { IFlight } from '../types/IFlight';
+import { IFlight } from '../types/IFlight'
 
 class FlightService {
-	private BASE_URL = 'https://679d13f487618946e6544ccc.mockapi.io/testove/v1/flights';
+  private BASE_URL = 'https://679d13f487618946e6544ccc.mockapi.io/testove/v1/flights'
 
-	async getFlights(): Promise<AxiosResponse<IFlight[]>> {
-		return axios.get<IFlight[]>(this.BASE_URL);
-	}
+  async getFlights(): Promise<IFlight[]> {
+    const res = await fetch(this.BASE_URL, { cache: 'no-store' })
+    if (!res.ok) throw new Error('Failed to fetch flights')
+    return res.json()
+  }
 
-	async getFlightById(id: string): Promise<AxiosResponse<IFlight>> {
-		return axios.get<IFlight>(`${this.BASE_URL}/${id}`);
-	}
+  async getFlightById(id: string): Promise<IFlight> {
+    const res = await fetch(`${this.BASE_URL}/${id}`, { cache: 'no-store' })
+    if (!res.ok) throw new Error(`Failed to fetch flight ${id}`)
+    return res.json()
+  }
 }
 
-export default new FlightService();
+export default new FlightService()
