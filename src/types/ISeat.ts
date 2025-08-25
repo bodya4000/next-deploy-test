@@ -1,8 +1,7 @@
-import { Seat } from '../constants/Seat';
-import { IFlight } from './IFlight';
+import { IFlight } from './IFlight'
 
 export interface ISeat {
-	id: string;
-	status: Seat;
-	flight?: IFlight;
+  id: string
+  status: string
+  flight?: IFlight
 }

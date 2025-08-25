@@ -1,7 +1,6 @@
 import { PageContainer } from '@/components/ui/containers'
 import FlightService from '@/services/FlightService'
 import React from 'react'
-import { FlightItem } from './flight-item'
 import { FlightListClient } from './flight-list-client'
 
 export const FlightList = async () => {

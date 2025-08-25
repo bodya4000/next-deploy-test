@@ -2,8 +2,10 @@ import FlightService from '@/services/FlightService'
 import { IFlight } from '@/types/IFlight'
 import React from 'react'
 
-export default async function FlightPage({ params }: any) {
-  const { id } = params
+type Props = { params: Promise<{ id: string }> }
+
+export default async function FlightPage({ params }: Props) {
+  const { id } = await params
   const flight: IFlight = await FlightService.getFlightById(id)
 
   return (
