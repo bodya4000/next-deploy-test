@@ -2,6 +2,7 @@ import { IFlight } from '@/types/IFlight'
 import { formatDate } from '@/utils'
 import React from 'react'
 import Link from 'next/link'
+import { PrimaryBtn } from '@/components/ui/buttons/primary-btn'
 
 interface Props {
   flight: IFlight
@@ -43,9 +44,7 @@ export const FlightItem = ({ flight }: Props) => {
             {flight.tickets.remaining}/{flight.tickets.total}
           </span>
         </p>
-        <button className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded transition'>
-          Book Now
-        </button>
+        <PrimaryBtn label='Book Now' />
       </div>
     </Link>
   )

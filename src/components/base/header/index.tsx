@@ -1,6 +1,6 @@
 import React from 'react'
-import { PageContainer, SpaceContainer } from '../ui/containers'
-import { HeaderSearch } from './header-search'
+import { PageContainer, SpaceContainer } from '../../ui/containers'
+import { HeaderSearch } from './search'
 
 export default function Header() {
   return (
