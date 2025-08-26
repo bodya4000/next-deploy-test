@@ -1,25 +1,24 @@
 'use client'
-import { useEffect } from 'react'
+import { useRef } from 'react'
 
-export default function OpenAppPage() {
-  useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor
+export default function OpenApp() {
+  const link = useRef<HTMLAnchorElement>(null)
 
-    const deepLink = 'myapp://list' 
-    window.location.href = deepLink
+  const handleClick = () => {
+    if (link.current) {
+      link.current.click()
+    }
+  }
 
-    // const timer = setTimeout(() => {
-    //   if (/android/i.test(userAgent)) {
-    //     window.location.href = 'https://play.google.com/store/apps/details?id=com.myapp'
-    //   } else if (/iPad|iPhone|iPod/.test(userAgent)) {
-    //     window.location.href = 'https://apps.apple.com/app/id1234567890'
-    //   } else {
-    //     window.location.href = '/'
-    //   }
-    // }, 1500)
+  return (
+    <div style={{ padding: 24 }}>
+      {/* прихований лінк */}
+      <a ref={link} href='myapp://list' style={{ display: 'none' }}>
+        Hidden link
+      </a>
 
-    // return () => clearTimeout(timer)
-  }, [])
-
-  return <p>Opening app...</p>
+      {/* кнопка для користувача */}
+      <button onClick={handleClick}>Open myapp://list</button>
+    </div>
+  )
 }

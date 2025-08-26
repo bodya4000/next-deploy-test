@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.anonymous.testtodoapp",
       "sha256_cert_fingerprints": [
-        "5C:C4:5A:B6:E8:4A:D8:13:E8:77:B8:98:1C:57:6C:C3:C2:37:A3:FF:31:3C:9C:1E:60:AD:61:68:35:B9:3B:F8"
+        "5C:C4:5A:B6:E8:4A:D8:13:E8:77:B8:98:1C:57:6C:C3:C2:37:A3:FF:31:3C:9C:1E:60:AD:61:68:35:B9:3B:F8",
+				"95:85:18:1C:F8:6B:70:D0:8E:44:FB:F9:36:79:29:DD:DA:E7:91:2F:B0:EE:9E:7B:CE:6B:AB:E2:14:D0:69:06"
       ]
     }
   }
